@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="el">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Δραστηριότητες στα Ελληνικά Νησιά</title>
+  
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="../css/style.css">
+  <style>
+  .hero-activities {
+      background: url('../images/hero-santorini-sunset.jpg') no-repeat center center/cover;
+      height: 70vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: #fff;
+      position: relative;
+    }
+    .hero-activities::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: rgba(0,0,0,0.4);
+    }
+    .hero-activities .hero-text {
+      position: relative;
+      z-index: 1;
+    }
+    .hero-activities h1 {
+      font-size: 3rem;
+      text-shadow: 2px 2px 8px rgba(0,0,0,0.7);
+    }
+    .hero-activities p {
+      font-size: 1.2rem;
+      margin-top: 1rem;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-transparent position-absolute w-100">
+    <div class="container">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-center" id="navMenu">
+        <ul class="navbar-nav text-center">
+          <li class="nav-item"><a class="nav-link" href="index.html">Αρχική</a></li>
+          <li class="nav-item"><a class="nav-link" href="islands.html">Νησιά</a></li>
+          <li class="nav-item"><a class="nav-link active" href="activities.html">Δραστηριότητες</a></li>
+          <li class="nav-item"><a class="nav-link" href="gallery.html">Συλλογή</a></li>
+          <li class="nav-item"><a class="nav-link" href="tips.html">Συμβουλές</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Επικοινωνία</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <!-- TELOS NAVBAR -->
+
+  <!-- Hero Section -->
+<header
+  class="hero-activities
+         d-flex align-items-center 
+         justify-content-center 
+         text-center 
+         flex-column"
+>
+  <div class="hero-text px-3">
+    <h1 class="display-4 fw-bold">Δραστηριότητες στα Ελληνικά Νησιά</h1>
+    <p class="lead">Απολαύστε ιστιοπλοΐα, καταδύσεις, πεζοπορίες και παραδοσιακές εμπειρίες!</p>
+  </div>
+</header>
+  <!-- TELOS Hero Section -->
+
+  <!-- EISAGWGI-->
+<section id="intro-activities" class="py-12 bg-white">
+  <div class="container mx-auto px-4 text-center">
+    <h2 class="text-4xl font-bold mb-4">Γιατί τα Ελληνικά Νησιά;</h2>
+    <p class="text-lg text-gray-700 mb-8">
+      Τα Ελληνικά νησιά συνδυάζουν μοναδικά την απέραντη γαλάζια θάλασσα με χρυσαφένιες ακτές, πλούσια ιστορία και παραδοσιακή φιλοξενία που καθηλώνει τον επισκέπτη. Κάθε νησί αποτελεί κι ένα μικρό «θησαυροφυλάκιο» από γραφικά χωριά, αρχαιολογικούς θησαυρούς και γαστρονομικές απολαύσεις, έτοιμα να αποκαλύψουν τα μυστικά τους.
+    </p>
+  </div>
+</section>
+<!-- telos eisagwgis -->
+
+
+<!--cards-->
+  <section class="container my-5">
+  <h2 class="text-center mb-4">Κατηγορίες Δραστηριοτήτων</h2>
+  <div class="row g-4 text-center">
+
+    <!-- Θαλάσσιες -->
+    <div class="col-md-6 col-lg-3">
+      <div class="card h-100 shadow">
+        <img src="../images/sailing.jpg" class="card-img-top" alt="Θαλάσσιες δραστηριότητες">
+        <div class="card-body">
+          <h5 class="card-title">Θάλασσα</h5>
+          <p class="card-text">Ιστιοπλοΐα, καταδύσεις, θαλάσσιο καγιάκ και jet ski σε καταγάλανες παραλίες.</p>
+          
+        </div>
+      </div>
+    </div>
+
+    <!-- Ορεινές -->
+    <div class="col-md-6 col-lg-3">
+      <div class="card h-100 shadow">
+        <img src="../images/hiking.jpg" class="card-img-top" alt="Πεζοπορία στα νησιά">
+        <div class="card-body">
+          <h5 class="card-title">Ορεινή Φύση</h5>
+          <p class="card-text">Πεζοπορίες σε φαράγγια, ποδηλασία σε ορεινές διαδρομές, εξερεύνηση σπηλαίων.</p>
+          
+        </div>
+      </div>
+    </div>
+
+    <!-- Πολιτιστικές -->
+    <div class="col-md-6 col-lg-3">
+      <div class="card h-100 shadow">
+        <img src="../images/culture.jpg" class="card-img-top" alt="Πολιτισμός και εκδηλώσεις">
+        <div class="card-body">
+          <h5 class="card-title">Πολιτισμός</h5>
+          <p class="card-text">Τοπικά φεστιβάλ, παραδοσιακά πανηγύρια, επισκέψεις σε μουσεία και αρχαιολογικούς χώρους.</p>
+          
+        </div>
+      </div>
+    </div>
+
+    <!-- Γαστρονομικές -->
+    <div class="col-md-6 col-lg-3">
+      <div class="card h-100 shadow">
+        <img src="../images/food.jpg" class="card-img-top" alt="Γαστρονομία στα νησιά">
+        <div class="card-body">
+          <h5 class="card-title">Γαστρονομία</h5>
+          <p class="card-text">Τοπικά πιάτα, μαγειρικά εργαστήρια και γευσιγνωσία κρασιών και ελαιολάδου.</p>
+          
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+<!--telos cards-->
+
+<!-- Best of: Top 5 Δραστηριότητες -->
+<section id="best-of-activities" class="py-5 bg-light">
+  <div class="container">
+    <h2 class="text-center mb-4">Best of: Top 5 Δραστηριότητες στα Ελληνικά Νησιά</h2>
+    <ol class="list-unstyled">
+      
+      <!-- 1 -->
+      <li class="row align-items-center mb-5">
+        <div class="col-md-5">
+          <img src="../images/sailing.jpg" alt="Ιστιοπλοΐα" class="img-fluid rounded shadow">
+        </div>
+        <div class="col-md-7">
+          <h3>1. Ιστιοπλοΐα</h3>
+          <p>
+            Εξερευνήστε τα κρυστάλλινα νερά του Αιγαίου πάνω σε ιστιοπλοϊκό, με ανεμπόδιστη θέα σε ξεχασμένες παραλίες και μυστικά καταφύγια. Ιδανικό για ρομαντικές εξορμήσεις ή παρέες που αναζητούν ελευθερία και αδρεναλίνη.
+          
+          </p>
+        </div>
+      </li>
+
+      <!-- 2 -->
+      <li class="row align-items-center mb-5 flex-md-row-reverse">
+        <div class="col-md-5">
+          <img src="../images/diving.jpg" alt="Καταδύσεις" class="img-fluid rounded shadow">
+        </div>
+        <div class="col-md-7">
+          <h3>2. Καταδύσεις</h3>
+          <p>
+            Βουτήξτε σε υδάτινα τοπία γεμάτα χρώμα και ζωή: πολύχρωμα κοράλλια, ναυάγια και άγρια θαλάσσια πανίδα σας περιμένουν. Ανεξάρτητα αν είστε πρωτάρηδες ή προχωρημένοι, οι ελληνικές θάλασσες εντυπωσιάζουν.
+          
+          </p>
+        </div>
+      </li>
+
+      <!-- 3 -->
+      <li class="row align-items-center mb-5">
+        <div class="col-md-5">
+          <img src="../images/hiking.jpg" alt="Πεζοπορία" class="img-fluid rounded shadow">
+        </div>
+        <div class="col-md-7">
+          <h3>3. Πεζοπορία</h3>
+          <p>
+            Περάστε μονοπάτια με θέα σε απόκρημνα τοπία, καταπράσινα φαράγγια και παραδοσιακά χωριά. Από το Φαράγγι της Σαμαριάς στην Κρήτη μέχρι τους μονοπάτια των Σποράδων, κάθε βήμα αξίζει.
+          
+          </p>
+        </div>
+      </li>
+
+      <!-- 4 -->
+      <li class="row align-items-center mb-5 flex-md-row-reverse">
+        <div class="col-md-5">
+          <img src="../images/windsurf.jpg" alt="Windsurf / Kite" class="img-fluid rounded shadow">
+        </div>
+        <div class="col-md-7">
+          <h3>4. Windsurf &amp; Kite</h3>
+          <p>
+            Απολαύστε τα δυνατά μελτέμια στις ακτές της Μυκόνου ή της Πάρου. Το windsurf και το kite-surfing εδώ είναι από τα κορυφαία στην Ευρώπη – τα κύματα, ο άνεμος και η θάλασσα συνδυάζονται μοναδικά.
+                    
+          </p>
+        </div>
+      </li>
+
+      <!-- 5 -->
+      <li class="row align-items-center">
+        <div class="col-md-5">
+          <img src="../images/cultural.jpg" alt="Παραδοσιακές Εμπειρίες" class="img-fluid rounded shadow">
+        </div>
+        <div class="col-md-7">
+          <h3>5. Παραδοσιακές Εμπειρίες</h3>
+          <p>
+            Ζήστε την καρδιά της νησιωτικής ζωής: σεμινάρια μαγειρικής με τοπικά προϊόντα, γλέντια κάτω από τα φεγγάρια, οινογευσίες τοπικών κρασιών και μαστίχας – μια αυθεντική γεύση Ελλάδας.
+                  
+          </p>
+        </div>
+      </li>
+
+    </ol>
+  </div>
+</section>
+<!--telos top 5 activities-->
+
+
+  <!-- Footer -->
+<footer class="bg-dark text-white py-5">
+  <div class="container text-center">
+    <div class="footer-brand h4 mb-3">GreekIslandExplorer</div>
+    <div class="footer-links mb-4">
+      <a href="index.html" class="text-white mx-2">Αρχική</a>
+      <a href="islands.html" class="text-white mx-2">Νησιά</a>
+      <a href="activities.html" class="text-white mx-2">Δραστηριότητες</a>
+      <a href="gallery.html" class="text-white mx-2">Gallery</a>
+      <a href="tips.html" class="text-white mx-2">Συμβουλές</a>
+      <a href="contact.html" class="text-white mx-2">Επικοινωνία</a>
+    </div>
+    <p class="mb-0">&copy; 2025 GreekIslandExplorer. All rights reserved.</p>
+  </div>
+</footer>
+ <!-- telos Footer -->
+<!--js bootstrap-->
+   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>

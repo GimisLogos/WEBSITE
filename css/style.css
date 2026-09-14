@@ -1,0 +1,649 @@
+@font-face {
+  font-family: 'Core Sans';
+  font-style: normal;
+  font-weight: 400;
+  src: url('fonts/CoreSans-Regular.woff2') format('woff2'),
+       url('fonts/CoreSans-Regular.woff')  format('woff');
+}
+
+@font-face {
+  font-family: 'Core Sans';
+  font-style: normal;
+  font-weight: 700;
+  src: url('fonts/CoreSans-Bold.woff2') format('woff2'),
+       url('fonts/CoreSans-Bold.woff')  format('woff');
+}
+
+
+body {
+  font-family: 'Core Sans', sans-serif;
+  line-height: 1.6;
+  
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Core Sans', sans-serif;
+  
+  font-weight: 700;
+}
+
+
+.nav-link,
+.btn {
+  font-family: 'Core Sans', sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+nav.navbar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  background-color: transparent !important;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  line-height: 1.6;
+  background-color: #f9f9f9;
+  color: #333;
+}
+
+nav {
+  background: #0077cc;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.logo {
+  font-size: 1.8rem;
+  font-weight: bold;
+}
+
+.nav-links {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.nav-links a:hover {
+  color: #ffdd57;
+}
+
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.menu-toggle span {
+  height: 3px;
+  width: 25px;
+  background: white;
+  margin: 4px 0;
+}
+
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+    position: absolute;
+    top: 70px;
+    left: 0;
+    width: 100%;
+    background: #0077cc;
+    flex-direction: column;
+    text-align: center;
+    gap: 1rem;
+    padding: 1rem 0;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .menu-toggle {
+    display: flex;
+  }
+}
+
+.carousel-item img {
+  height: 500px;
+  object-fit: cover;
+}
+
+.lead {
+  font-size: 1.2rem;
+  line-height: 1.8;
+}
+
+section img {
+  max-height: 400px;
+  object-fit: cover;
+}
+
+.region-section {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
+.region-image {
+  max-height: 500px;
+  object-fit: cover;
+}
+
+h3 {
+  font-size: 1.75rem;
+}
+
+.fs-5 {
+  font-size: 1.25rem;
+}
+
+.newsletter-section {
+  background: linear-gradient(to right, #e6f0ff, #ffffff);
+}
+
+@media (max-width: 768px) {
+  .region-image {
+    max-height: 300px;
+  }
+}
+
+
+.hero {
+  background: url('greece-beach.jpg') no-repeat center center/cover;
+  color: white;
+  height: 70vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 2rem;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.6);
+}
+
+
+section {
+  padding: 4rem 2rem;
+  max-width: 1200px;
+  margin: auto;
+}
+
+section h2 {
+  text-align: center;
+  font-size: 2rem;
+  color: #0077cc;
+  margin-bottom: 2rem;
+}
+
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 2rem;
+}
+
+.card {
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  padding: 1.5rem;
+  transition: transform 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.card img {
+  width: 100%;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+}
+
+.card h3 {
+  margin-bottom: 0.5rem;
+  color: #0077cc;
+}
+
+
+.btn {
+  display: inline-block;
+  background: #0077cc;
+  color: white;
+  padding: 0.7rem 1.2rem;
+  border-radius: 25px;
+  text-decoration: none;
+  transition: background 0.3s;
+}
+
+.btn:hover {
+  background: #005fa3;
+}
+
+footer {
+  background-color: #1e90ff;
+  color: white;
+  padding: 2rem 1rem;
+  margin-top: 3rem;
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.footer-brand {
+  font-size: 1.8rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.footer-links {
+  margin-bottom: 1rem;
+}
+
+.footer-links a {
+  color: white;
+  margin: 0 0.8rem;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.footer-links a:hover {
+  color: #ffdd57;
+}
+
+.footer-copy {
+  font-size: 0.9rem;
+  opacity: 0.8;
+}
+
+
+.text-center {
+  text-align: center;
+}
+
+.hero-image {
+  background-image: url('../images/island1.jpg');
+  height: 60vh;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+.hero-text {
+  position: absolute;
+  bottom: 30px;
+  left: 50px;
+  color: white;
+}
+
+.mt-2 {
+  margin-top: 2rem;
+}
+
+nav.navbar:hover {
+  background-color: white !important;
+}
+
+nav.navbar:hover .nav-link {
+  color: black !important;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: #f4f8fb;
+  color: #333;
+}
+a {
+  text-decoration: none;
+  color: white;
+}
+
+.dropdown-nav {
+  background-color: #0077cc;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+}
+.menu {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.menu > li {
+  position: relative;
+}
+.menu > li > a {
+  padding: 1rem 1.5rem;
+  display: block;
+  transition: background 0.3s;
+}
+.menu > li > a:hover {
+  background-color: #005fa3;
+}
+.submenu {
+  display: none;
+  position: absolute;
+  background-color: #0077cc;
+  top: 100%;
+  left: 0;
+  min-width: 180px;
+}
+.submenu li a {
+  padding: 0.75rem 1rem;
+  display: block;
+}
+.menu li:hover .submenu {
+  display: block;
+}
+
+.hero {
+  background: url('images/greece.jpg') no-repeat center center/cover;
+  height: 60vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+}
+.hero-text h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  text-shadow: 2px 2px 6px rgba(0,0,0,0.5);
+}
+
+.content {
+  padding: 3rem 1.5rem;
+  max-width: 1200px;
+  margin: auto;
+}
+.content h2 {
+  text-align: center;
+  font-size: 2rem;
+  color: #0077cc;
+  margin-bottom: 2rem;
+}
+.island-groups {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+}
+.card {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+.card h3 {
+  color: #0077cc;
+  margin-bottom: 0.5rem;
+}
+
+footer {
+  background-color: #005fa3;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+  margin-top: 2rem;
+}
+
+@media (max-width: 768px) {
+  .menu {
+    flex-direction: column;
+  }
+  .menu > li {
+    width: 100%;
+    text-align: center;
+  }
+  .submenu {
+    position: static;
+    width: 100%;
+  }
+}
+
+.accordion-button {
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+.accordion-body li {
+  padding: 0.25rem 0;
+  font-size: 1rem;
+}
+
+.container h2 {
+  font-size: 2rem;
+  font-weight: 700;
+}
+.container h3 {
+  font-size: 1.75rem;
+  font-weight: 600;
+}
+
+.row img {
+  max-height: 400px;
+  object-fit: cover;
+}
+
+.list-unstyled li {
+  padding: 0.5rem 0;
+}
+
+@media (max-width: 767px) {
+  .row.align-items-center {
+    text-align: center;
+  }
+  .row.align-items-center .col-lg-6:first-child {
+    margin-bottom: 1.5rem;
+  }
+}
+
+.section-intro {
+  padding: 60px 20px;
+  background-color: #f9f9f9;
+  text-align: center;
+}
+.intro-header h1 {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+}
+.intro-header h2 {
+  font-size: 1.75rem;
+  color: #555;
+  margin-bottom: 1.5rem;
+}
+.intro-content p {
+  font-size: 1.1rem;
+  max-width: 800px;
+  margin: 0 auto 2rem;
+  line-height: 1.6;
+}
+.hero-carousel {
+  position: relative;
+  max-width: 1000px;
+  margin: 0 auto 2rem;
+  overflow: hidden;
+}
+.carousel-slide {
+  display: none;
+}
+.carousel-slide img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+.intro-cta .btn {
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  border-radius: 4px;
+  text-decoration: none;
+}
+@media (max-width: 767px) {
+  .hero-activities .hero-text {
+    display: none !important;
+  }
+}
+
+.contact-section {
+  padding: 3rem 1rem;
+  background: #f9f9f9;
+}
+.contact-container {
+  max-width: 600px;
+  margin: 0 auto;
+  background: #fff;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+.contact-title {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  color: #333;
+}
+.contact-form .form-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1rem;
+}
+.contact-form label {
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+  color: #555;
+}
+.contact-form input,
+.contact-form textarea {
+  padding: 0.75rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1rem;
+  transition: border-color 0.3s;
+}
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border-color: #007BFF;
+  outline: none;
+}
+.form-group--button {
+  text-align: center;
+}
+.btn-submit {
+  background: #007BFF;
+  color: #fff;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+.btn-submit:hover {
+  background: #0056b3;
+}
+
+@media (max-width: 768px) {
+  .contact-container {
+    padding: 1.5rem 1rem;
+  }
+  .contact-form .form-group {
+    align-items: center;
+    text-align: center;
+  }
+  .contact-form input,
+  .contact-form textarea {
+    width: 100%;
+  }
+}
+
+.parallax {
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+  padding: 4rem 1rem;
+  color: #fff;
+  text-shadow: 0 2px 6px rgba(0,0,0,0.5);
+}
+#itineraries .row {
+  gap: 1.5rem;
+}
+
+.itinerary-card {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  border-left: 4px solid #28a745; /* πράσινο accent */
+}
+.itinerary-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.itinerary-card h3 {
+  font-size: 1.25rem;
+  margin-bottom: 1rem;
+  color: #28a745;
+}
+
+.itinerary-card ul {
+  padding-left: 1rem;
+}
+.itinerary-card ul li {
+  margin-bottom: 0.75rem;
+  line-height: 1.4;
+}
+.itinerary-card ul li strong {
+  color: #333;
+}
+@media(min-width:992px){
+  .tips-sidebar { position: sticky; top: 100px; }
+}
+@media (min-width: 992px) {
+  .tips-sidebar {
+    position: sticky;
+    top: 100px;
+  }
+}
+
+.tips-sidebar .bg-light {
+  background-color: #f8f9fa !important;
+}
+.tips-sidebar h4 {
+  color: #007bff;
+  font-size: 1.25rem;
+}
+.tips-sidebar ul li {
+  margin-bottom: 0.75rem;
+  padding-left: 1.25rem;
+  position: relative;
+}
+.tips-sidebar ul li::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  color: #007bff;
+}

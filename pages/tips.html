@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="el">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Χρήσιμες Πληροφορίες</title>
+  <link rel="stylesheet" href="../css/style.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+ <style>
+  .hero-activities {
+      background: url('../images/island1.jpg') no-repeat center center/cover;
+      height: 70vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: #fff;
+      position: relative;
+    }
+    .hero-activities::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: rgba(0,0,0,0.4);
+    }
+    .hero-activities .hero-text {
+      position: relative;
+      z-index: 1;
+    }
+    .hero-activities h1 {
+      font-size: 3rem;
+      text-shadow: 2px 2px 8px rgba(0,0,0,0.7);
+    }
+    .hero-activities p {
+      font-size: 1.2rem;
+      margin-top: 1rem;
+    }
+    #stats .stat h3 {
+    font-size: 2.5rem;
+    margin: 0;
+    color: #007bff;
+  }
+  #stats .stat p {
+    margin-top: 0.5rem;
+    font-size: 1rem;
+    color: #555;
+  }
+  </style>
+</head>
+<body>
+  <!-- js bootstrap -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  
+  <!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark fixed-top bg-transparent">
+  <div class="container">
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse justify-content-center" id="navMenu">
+      <ul class="navbar-nav text-center">
+        <li class="nav-item"><a class="nav-link text-white" href="index.html">Αρχική</a></li>
+        <li class="nav-item"><a class="nav-link text-white" href="islands.html">Νησιά</a></li>
+        <li class="nav-item"><a class="nav-link text-white" href="activities.html">Δραστηριότητες</a></li>
+        <li class="nav-item"><a class="nav-link text-white" href="gallery.html">Συλλογή</a></li>
+        <li class="nav-item"><a class="nav-link text-white" href="tips.html">Συμβουλές</a></li>
+        <li class="nav-item"><a class="nav-link text-white" href="contact.html">Επικοινωνία</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<!--TELOS Navbar -->
+
+   <!--hero image-->
+  <header class="hero-activities">
+    <div class="hero-text">
+     <h1>Συμβουλές για Ιδανικές Διακοπές στα Ελληνικά Νησιά</h1>
+     <p>  Οργανώστε έξυπνα, ανακαλύψτε κρυφές παραλίες και απολαύστε αυθεντικές γεύσεις.</p>
+    
+    </div>
+  </header>
+  <!--telos hero image-->
+  
+<!--widget-->
+<section id="stats" class="container text-center py-5">
+  <div class="row justify-content-center">
+    <!-- Counter 1 -->
+    <div class="col-6 col-md-3 mb-4">
+      <div class="stat">
+        <h3><span class="counter" data-target="227">0</span>+</h3>
+        <p>Νησιά</p>
+      </div>
+    </div>
+    <!-- Counter 2 -->
+    <div class="col-6 col-md-3 mb-4">
+      <div class="stat">
+        <h3><span class="counter" data-target="150">0</span>+</h3>
+        <p>Παραλίες</p>
+      </div>
+    </div>
+    <!-- Counter 3 -->
+    <div class="col-6 col-md-3 mb-4">
+      <div class="stat">
+        <h3><span class="counter" data-target="300">0</span>+</h3>
+        <p>Ηλιοβασιλέματα</p>
+      </div>
+    </div>
+    <!-- Counter 4 -->
+    <div class="col-6 col-md-3 mb-4">
+      <div class="stat">
+        <h3><span class="counter" data-target="500">0</span>+</h3>
+        <p>Μονοπάτια</p>
+      </div>
+    </div>
+  </div>
+</section>
+<!--telos widget-->
+
+<!-- JS animated counters -->
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const counters = document.querySelectorAll('.counter');
+    const speed = 200; // μεγαλύτερος αριθμός = πιο αργή αύξηση
+
+    counters.forEach(counter => {
+      const updateCount = () => {
+        const target = +counter.getAttribute('data-target');
+        const count = +counter.innerText;
+        const increment = Math.ceil(target / speed);
+
+        if (count < target) {
+          counter.innerText = count + increment;
+          requestAnimationFrame(updateCount);
+        } else {
+          counter.innerText = target;
+        }
+      };
+      updateCount();
+    });
+  });
+</script>
+<!--telos Animated Counters -->
+
+<!--kartes-->
+<section id="itineraries-section" class="container py-5">
+  <h2 class="text-center mb-4">Προτεινόμενα Δρομολόγια</h2>
+  <div class="row">
+    <!-- αριστερά: itineraries -->
+    <div class="col-12 col-lg-8">
+      <div id="itineraries" class="row gy-4">
+        <!-- Itinerary 1 -->
+        <div class="col-12 col-md-4">
+          <div class="itinerary-card p-4 bg-white rounded shadow-sm h-100">
+            <h3 class="mb-3">3ήμερο Σαββατοκύριακο</h3>
+            <ul class="list-unstyled">
+              <li><strong>Ημέρα 1:</strong> Μύκονος – Περπάτημα στα Ματογιάννια & ηλιοβασίλεμα.</li>
+              <li><strong>Ημέρα 2:</strong> Δήλος – Εκδρομή στο ιερό νησί.</li>
+              <li><strong>Ημέρα 3:</strong> Πάρος – Naoussa & Κολυμπήθρες.</li>
+            </ul>
+          </div>
+        </div>
+        <!-- Itinerary 2 -->
+        <div class="col-12 col-md-4">
+          <div class="itinerary-card p-4 bg-white rounded shadow-sm h-100">
+            <h3 class="mb-3">Εβδομαδιαίο Road-trip</h3>
+            <ul class="list-unstyled">
+              <li><strong>Ημ. 1–2:</strong> Κρήτη – Χανιά & Σαμαριά.</li>
+              <li><strong>Ημ. 3–4:</strong> Σαντορίνη – Φηρά & Οία.</li>
+              <li><strong>Ημ. 5–7:</strong> Νάξος & Μύκονος.</li>
+            </ul>
+          </div>
+        </div>
+        <!-- Itinerary 3 -->
+        <div class="col-12 col-md-4">
+          <div class="itinerary-card p-4 bg-white rounded shadow-sm h-100">
+            <h3 class="mb-3">Ρομαντικό Getaway</h3>
+            <ul class="list-unstyled">
+              <li><strong>Ημ. 1:</strong> Σαντορίνη – Δείπνο με καλντέρα.</li>
+              <li><strong>Ημ. 2:</strong> Ιδιωτικό ιστιοπλοϊκό.</li>
+              <li><strong>Ημ. 3:</strong> Κρουαζιέρα νησάκια.</li>
+            </ul>
+          </div>
+        </div>
+        <!-- Itinerary 4 -->
+        <div class="col-12 col-md-4">
+          <div class="itinerary-card p-4 bg-white rounded shadow-sm h-100">
+            <h3 class="mb-3">Οικογενειακή Απόδραση</h3>
+            <ul class="list-unstyled">
+              <li><strong>Ημ. 1:</strong> Κέρκυρα – Πάρκο Νεράιδων.</li>
+              <li><strong>Ημ. 2:</strong> Παξοί – Γαλάζια Σπηλιά.</li>
+              <li><strong>Ημ. 3:</strong> Αντίπαξοι – Snorkeling.</li>
+            </ul>
+          </div>
+        </div>
+        <!-- Itinerary 5 -->
+        <div class="col-12 col-md-4">
+          <div class="itinerary-card p-4 bg-white rounded shadow-sm h-100">
+            <h3 class="mb-3">Περιπέτεια & Μονοπάτια</h3>
+            <ul class="list-unstyled">
+              <li><strong>Ημ. 1:</strong> Σκιάθος – Κουκουναριές.</li>
+              <li><strong>Ημ. 2:</strong> Σκόπελος – Φαράγγι Αγ. Ιωάννη.</li>
+              <li><strong>Ημ. 3:</strong> Αλόννησος – Θαλάσσιο Πάρκο.</li>
+            </ul>
+          </div>
+        </div>
+        <!-- Itinerary 6 -->
+        <div class="col-12 col-md-4">
+          <div class="itinerary-card p-4 bg-white rounded shadow-sm h-100">
+            <h3 class="mb-3">Γαστρονομικό Ταξίδι</h3>
+            <ul class="list-unstyled">
+              <li><strong>Ημ. 1:</strong> Κέρκυρα – Τοπική φέτα.</li>
+              <li><strong>Ημ. 2:</strong> Κρήτη – Μάθημα μαγειρικής.</li>
+              <li><strong>Ημ. 3:</strong> Νάξος – Οινογευσία.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+<!--telos kartes-->
+
+    <!-- tips-->
+    <aside class="col-12 col-lg-4 tips-sidebar">
+  <div class="p-4 bg-light rounded shadow-sm">
+    <h4 class="mb-3">Quick Tips</h4>
+    <ul class="list-unstyled">
+      <li>Κράτα πάντα επαναχρησιμοποιούμενο μπουκάλι νερό.</li>
+      <li>Απόφυγε τα πλαστικά καλαμάκια.</li>
+      <li>Δοκίμασε τοπικά γλυκά & ποτά.</li>
+      <li>Φόρα κράνος αν νοικιάσεις ATV.</li>
+      <li>Μην ξεχνάς το αντηλιακό.</li>
+      <li>Κάνε early check-in στο φέρι για καλύτερες θέσεις.</li>
+      <li>Κατέβασε offline χάρτες για λόγους δικτύου.</li>
+      <li>Προτίμησε τραπεζάκια με θέα για το γεύμα σου.</li>
+      <li>Έλεγξε ώρες λειτουργίας καταστημάτων & ταβερνών.</li>
+      <li>Φόρεσε άνετα παπούτσια για στενά σοκάκια.</li>
+    </ul>
+  </div>
+</aside>
+  </div>
+</section>
+<!--telos tips-->
+
+<!--FAQ SECTION-->
+<section id="faq" class="container py-5">
+  <h2 class="text-center mb-4">Συχνές Ερωτήσεις</h2>
+  <div class="accordion" id="tipsFaq">
+
+    <!-- 1 -->
+    <div class="accordion-item">
+      <h3 class="accordion-header" id="faqHeading1">
+        <button class="accordion-button collapsed" type="button"
+                data-bs-toggle="collapse" data-bs-target="#faqCollapse1"
+                aria-expanded="false" aria-controls="faqCollapse1">
+          Ποια είναι η καλύτερη εποχή για να επισκεφθώ τα νησιά;
+        </button>
+      </h3>
+      <div id="faqCollapse1" class="accordion-collapse collapse"
+           aria-labelledby="faqHeading1" data-bs-parent="#tipsFaq">
+        <div class="accordion-body">
+          Η Άνοιξη (Μάιος–Ιούνιος) και το Φθινόπωρο (Σεπτέμβριος–Οκτώβριος) προσφέρουν ήπιες θερμοκρασίες, λιγότερο κόσμο και χαμηλότερες τιμές.
+        </div>
+      </div>
+    </div>
+    <!-- 2 -->
+    <div class="accordion-item">
+      <h3 class="accordion-header" id="faqHeading2">
+        <button class="accordion-button collapsed" type="button"
+                data-bs-toggle="collapse" data-bs-target="#faqCollapse2"
+                aria-expanded="false" aria-controls="faqCollapse2">
+          Πώς μπορώ να κλείσω φέρι για το νησί μου;
+        </button>
+      </h3>
+      <div id="faqCollapse2" class="accordion-collapse collapse"
+           aria-labelledby="faqHeading2" data-bs-parent="#tipsFaq">
+        <div class="accordion-body">
+          Κλείστε εγκαίρως μέσω FerryHopper ή Viva.gr, ειδικά τους καλοκαιρινούς μήνες. Κρατήσεις 2–3 εβδομάδες πριν εξασφαλίζουν καλύτερες τιμές.
+        </div>
+      </div>
+    </div>
+
+    <!-- 3 -->
+    <div class="accordion-item">
+      <h3 class="accordion-header" id="faqHeading3">
+        <button class="accordion-button collapsed" type="button"
+                data-bs-toggle="collapse" data-bs-target="#faqCollapse3"
+                aria-expanded="false" aria-controls="faqCollapse3">
+          Τι πρέπει να πακετάρω για ένα ταξίδι στα νησιά;
+        </button>
+      </h3>
+      <div id="faqCollapse3" class="accordion-collapse collapse"
+           aria-labelledby="faqHeading3" data-bs-parent="#tipsFaq">
+        <div class="accordion-body">
+          Αντηλιακό υψηλού SPF, καπέλο, μάσκα-αναπνευστήρα, ελαφριά ρούχα, άνετα παπούτσια για πεζοπορία, και επαναχρησιμοποιούμενο μπουκάλι νερό.
+        </div>
+      </div>
+    </div>
+
+    <!-- 4 -->
+    <div class="accordion-item">
+      <h3 class="accordion-header" id="faqHeading4">
+        <button class="accordion-button collapsed" type="button"
+                data-bs-toggle="collapse" data-bs-target="#faqCollapse4"
+                aria-expanded="false" aria-controls="faqCollapse4">
+          Πώς ενοικιάζω αυτοκίνητο ή ATV στο νησί;
+        </button>
+      </h3>
+      <div id="faqCollapse4" class="accordion-collapse collapse"
+           aria-labelledby="faqHeading4" data-bs-parent="#tipsFaq">
+        <div class="accordion-body">
+          Κλείστε online σε πλατφόρμες όπως Discover Cars, συγκρίνετε τιμές και επιθεωρήστε το όχημα πριν φύγετε. Πάντα με valid δίπλωμα και κράνος (για ATV).
+          <section class="rental-section py-5">
+    <div class="container">
+      <h2 class="text-center mb-4">Πληροφορίες Ενοικίασης Αυτοκινήτου ή ATV</h2>
+      <div class="table-responsive">
+        <table class="table table-bordered table-hover align-middle text-center">
+          <thead class="table-primary">
+            <tr>
+              <th>Στοιχείο</th>
+              <th>Περιγραφή</th>
+              <th>Παραδείγματα</th>
+              <th>Σημείωση</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Τρόπος Κράτησης</td>
+              <td>Online μέσω πλατφορμών</td>
+              <td>Discover Cars, Rentalcars</td>
+              <td>Προτείνεται κράτηση εκ των προτέρων</td>
+            </tr>
+            <tr>
+              <td>Σύγκριση Τιμών</td>
+              <td>Επιλογή της καλύτερης προσφοράς</td>
+              <td>Μέσω πλατφόρμας ή τοπικών πρακτορείων</td>
+              <td>Διαφέρει ανάλογα με την περίοδο</td>
+            </tr>
+            <tr>
+              <td>Απαιτούμενα Έγγραφα</td>
+              <td>Έγκυρο δίπλωμα και ταυτότητα</td>
+              <td>Δίπλωμα αυτοκινήτου/μοτοσυκλέτας</td>
+              <td>Απαραίτητα για ασφάλιση και παραλαβή</td>
+            </tr>
+            <tr>
+              <td>Εξοπλισμός Ασφαλείας</td>
+              <td>Υποχρεωτικό κράνος για ATV</td>
+              <td>Παρέχεται από τον εκμισθωτή</td>
+              <td>Ελέγξτε την κατάστασή του πριν φύγετε</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+        </div>
+      </div>
+    </div>
+
+    <!-- 5 -->
+    <div class="accordion-item">
+      <h3 class="accordion-header" id="faqHeading5">
+        <button class="accordion-button collapsed" type="button"
+                data-bs-toggle="collapse" data-bs-target="#faqCollapse5"
+                aria-expanded="false" aria-controls="faqCollapse5">
+          Υπάρχουν ATM και φαρμακεία στα περισσότερα νησιά;
+        </button>
+      </h3>
+      <div id="faqCollapse5" class="accordion-collapse collapse"
+           aria-labelledby="faqHeading5" data-bs-parent="#tipsFaq">
+        <div class="accordion-body">
+          Στα μεγάλα νησιά (Κρήτη, Ρόδος, Κέρκυρα) υπάρχουν ATM και φαρμακεία σε κάθε χωριό. Σε μικρότερα, ελέγξτε ώρες λειτουργίας και φροντίστε να έχετε μετρητά.
+        </div>
+      </div>
+    </div>
+
+    <!-- 6 -->
+    <div class="accordion-item">
+      <h3 class="accordion-header" id="faqHeading6">
+        <button class="accordion-button collapsed" type="button"
+                data-bs-toggle="collapse" data-bs-target="#faqCollapse6"
+                aria-expanded="false" aria-controls="faqCollapse6">
+          Τι γεύσεις πρέπει οπωσδήποτε να δοκιμάσω;
+        </button>
+      </h3>
+      <div id="faqCollapse6" class="accordion-collapse collapse"
+           aria-labelledby="faqHeading6" data-bs-parent="#tipsFaq">
+        <div class="accordion-body">
+          Δοκιμάστε φρέσκο ψάρι και θαλασσινά, τοπικά τυριά (φέτα, γραβιέρα), μεζέδες με ντόπια προϊόντα και γλυκά με μέλι ή μαστίχα.
+        </div>
+      </div>
+    </div>
+
+    <!-- 7 -->
+    <div class="accordion-item">
+      <h3 class="accordion-header" id="faqHeading7">
+        <button class="accordion-button collapsed" type="button"
+                data-bs-toggle="collapse" data-bs-target="#faqCollapse7"
+                aria-expanded="false" aria-controls="faqCollapse7">
+          Πώς να σεβαστώ το περιβάλλον κατά τις διακοπές μου;
+        </button>
+      </h3>
+      <div id="faqCollapse7" class="accordion-collapse collapse"
+           aria-labelledby="faqHeading7" data-bs-parent="#tipsFaq">
+        <div class="accordion-body">
+          Χρησιμοποιήστε επαναχρησιμοποιούμενα μπουκάλια, μην αφήνετε σκουπίδια στην παραλία, υποστηρίξτε τοπικές επιχειρήσεις και ακολουθήστε σηματοδοτημένα μονοπάτια.
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+<!--telos faq section-->
+
+  <!-- Footer -->
+<footer class="bg-dark text-white py-5">
+  <div class="container text-center">
+    <div class="footer-brand h4 mb-3">GreekIslandExplorer</div>
+    <div class="footer-links mb-4">
+      <a href="index.html" class="text-white mx-2">Αρχική</a>
+      <a href="islands.html" class="text-white mx-2">Νησιά</a>
+      <a href="activities.html" class="text-white mx-2">Δραστηριότητες</a>
+      <a href="gallery.html" class="text-white mx-2">Gallery</a>
+      <a href="tips.html" class="text-white mx-2">Συμβουλές</a>
+      <a href="contact.html" class="text-white mx-2">Επικοινωνία</a>
+    </div>
+    <p class="mb-0">&copy; 2025 GreekIslandExplorer. All rights reserved.</p>
+  </div>
+</footer>
+ <!-- telos Footer -->
+</body>
+</html>
